@@ -9,6 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.0.10",
+    "@vueuse/core": "^9.6.0",
+    "element-plus": "^2.2.26",
     "pinia": "^2.0.27",
     "push.js": "^1.0.12",
     "socket.io-client": "^4.5.4",
