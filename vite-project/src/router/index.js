@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import HellowWorld from "../view/HelloWorld.vue";
+import ChatRoom from "../view/ChatRoom.vue";
 
 const routes = [
   {
@@ -16,7 +17,7 @@ const routes = [
   },
   {
     path: "/chat",
-    component: () => import("../view/ChatRoom.vue"),
+    component: ChatRoom,
   },
 ];
 
