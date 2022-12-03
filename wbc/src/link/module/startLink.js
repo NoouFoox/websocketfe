@@ -13,7 +13,7 @@ const startLink = (userlist, socket) => {
         socket.to(item).emit("sendmsg", arg);
       });
   });
-};  
+};
 module.exports = {
   startLink,
 };
