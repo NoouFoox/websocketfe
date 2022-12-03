@@ -1,8 +1,8 @@
 /**
- * 增加房间
+ * 房间
  * @param {*} socket
  */
- const addRoom = (socket, roomList) => {
+const addRoom = (socket, roomList, userlist) => {
   socket.on("getRoomList", (d) => {
     if (roomList[d] == undefined) {
       roomList[d] = [socket.id];
@@ -12,6 +12,11 @@
       }
     }
     console.log(roomList);
+    socket.emit("getroom", roomList);
+    userlist.forEach((i) => socket.to(i).emit("getroom", roomList));
+  });
+  socket.on("uproomliet", () => {
+    socket.emit("getroom", roomList);
   });
 };
 module.exports = {
