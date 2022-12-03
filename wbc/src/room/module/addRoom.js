@@ -11,7 +11,7 @@ const addRoom = (socket, roomList, userlist) => {
         roomList[d].push(socket.id);
       }
     }
-    console.log(roomList);
+    // console.log(roomList);
     socket.emit("getroom", roomList);
     userlist.forEach((i) => socket.to(i).emit("getroom", roomList));
   });
